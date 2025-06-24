@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portifólio Luciano</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- links de fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delius&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="./Imagens/Design sem nome (6).png" alt="" class="logo" />
+    </header>
+    <div class="menu">
+      <!-- lista de menu linkando com partes da página -->
+      <ul class="limenu">
+        <li><a href="#lkport" class="list">Portifólio</a></li>
+        <li><a href="#contatos" class="list">Contato</a></li>
+        <li><a href="#pessoal" class="list">Pessoal</a></li>
+        <li><a href="#prof" class="list">Profissional</a></li>
+      </ul>
+    </div>
+
+    <nav>
+      <h1>Luciano dos Santos</h1>
+      <h3 class="analista">Analista e Desenvolvedor de sistemas</h3>
+    </nav>
+    <main>
+      <div class="subtitulo">
+        <h2 class="sub">
+          Unindo lógica e criatividade para construir experiências digitais
+          impactantes !!!
+        </h2>
+      </div>
+
+      <div class="paragrafo">
+        <h2 id="pessoal" class="ps">Pessoal:</h2>
+        <p>
+          Sou apaixonado por tecnologia — adoro explorar novidades, entender
+          como as coisas funcionam e descobrir soluções criativas para o dia a
+          dia. Gosto de estar por dentro das inovações, sempre conectado ao que
+          há de mais atual. Além disso, o esporte faz parte da minha vida,
+          especialmente o futebol. Jogar bola me dá energia, me desafia e me
+          diverte como poucas coisas. É onde libero a mente e o corpo ao mesmo
+          tempo. <br />
+          Cozinhar também é uma das minhas paixões. Estar na cozinha é como
+          estar em um laboratório de sabores. Gosto de inventar receitas,
+          experimentar ingredientes e surpreender quem prova o que preparo — é
+          meu jeito de cuidar e expressar criatividade. <br />
+          E, claro, não posso deixar de mencionar a trilha sonora da minha vida:
+          sou apaixonado por música, especialmente o bom e velho rock clássico.
+          Bandas como Queen, Led Zeppelin, Pink Floyd e tantas outras fazem
+          parte do meu dia a dia e alimentam minha energia, foco e inspiração.
+          <br />
+          Tecnologia, esporte, culinária e música: são esses pilares que moldam
+          quem sou e me mantêm sempre em movimento — aprendendo, criando e
+          vivendo com entusiasmo. <br />
+        </p>
+      </div>
+
+      <div class="paragrafo">
+        <h2 id="prof" class="ps">Profissional:</h2>
+        <p>
+          Sou Desenvolvedor e Analista de Sistemas, e atualmente estou cursando
+          a faculdade de Análise e Desenvolvimento de Sistema na Uninter. Minha
+          missão é transformar ideias em soluções digitais funcionais,
+          visualmente atraentes e centradas na experiência do usuário. <br />
+          Com uma sólida base em desenvolvimento e análise de sistemas, trago
+          uma visão estratégica e técnica ao criar interfaces modernas,
+          responsivas e otimizadas para performance. Acredito que o design vai
+          além da estética — ele deve resolver problemas, facilitar interações e
+          encantar quem o utiliza. <br />
+          Estou sempre em evolução, explorando novas tendências e aprimorando
+          minhas habilidades para entregar projetos com excelência, inovação e
+          propósito.
+        </p>
+      </div>
+    </main>
+    <!-- Portifólio de sites -->
+    <div class="port">
+      <div id="lkport" class="perf">
+        <a href="https://lucds2.github.io/newcar/"
+          ><img src="./Imagens/Foto New Car.png" alt="" class="fotoport"
+        /></a>
+        <h3 class="txtport">Loja New Car</h3>
+      </div>
+      <div class="perf2">
+        <a href="https://lucds2.github.io/sophie_lumiere_fotos/"
+          ><img src="./Imagens/Foto Sophie.png" alt="" class="fotoport"
+        /></a>
+        <h3 class="txtport">Fotógrafa Sophie Lumiére</h3>
+      </div>
+    </div>
+    <!-- Criação do formulário para contato -->
+    <section id="contatos" class="contatos">
+      <h4 class="contatos-titulo">Entre em Contato</h4>
+      <form class="formulario-contato" id="formulario" onsubmit="enviar(event)">
+        <div class="grupo-form">
+          <input placeholder="Nome" class="campo-form" id="nome" />
+        </div>
+        <div class="grupo-form">
+          <textarea
+            rows="6"
+            id="mensagem"
+            class="campo-form"
+            placeholder="Digite aqui sua mensagem."
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-form">Enviar Whatsapp</button>
+      </form>
+    </section>
+
+    <!-- Código JS para envio do formulário de contato -->
+    <script>
+      function enviar(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const mensagem = document.getElementById("mensagem").value;
+        const telefone = "5541984000638";
+        const texto = `Olá, me chamo ${nome}, ${mensagem}`;
+        const msgFormatada = encodeURIComponent(texto);
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+</html>
