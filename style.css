@@ -4,7 +4,7 @@
 
 body {
   background-color: #0a0a0a;
-   background-color: #0a0a0a;
+  background-color: #0a0a0a;
   background-image: repeating-linear-gradient(
     45deg,
     #0a0a0a 0px,
@@ -13,7 +13,6 @@ body {
     #1a1a1a 8px
   );
   color: #e0e0e0;
- 
 }
 
 .logo {
@@ -114,10 +113,14 @@ h2 {
 }
 
 .port {
-  display: flex;
+  /*display: flex;
   justify-content: center;
   gap: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 100px;*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 colunas de tamanho igual */
+  gap: 20px; /* espaçamento entre os itens */
+  padding: 20px;
 }
 
 .fotoport {
@@ -200,10 +203,22 @@ h2 {
   transform: translateY(-3px);
   box-shadow: 0 0 10px rgba(233, 188, 197, 0.534);
 }
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: aliceblue;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 1000;
+}
 
 /* Responsividade */
 
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
   h1 {
     font-size: 48px;
     margin-left: 2px;
@@ -234,13 +249,24 @@ h2 {
   }
 
   .limenu {
-    display: flex;
-    gap: 10px;
-    margin: 0;
-    font-size: 16px;
-    text-align: center;
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
   }
 
+  .limenu.show {
+    display: flex;
+  }
+
+  .limenu li {
+    margin: 10px 0;
+  }
   .port {
     flex-direction: column;
     gap: 30px;
@@ -263,6 +289,8 @@ h2 {
     margin-bottom: 30px;
   }
   .port {
+    grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    gap: 30px;
     margin-bottom: 20px;
   }
 
