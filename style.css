@@ -3,7 +3,17 @@
 }
 
 body {
-  background-color: black;
+  background-color: #0a0a0a;
+   background-color: #0a0a0a;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #0a0a0a 0px,
+    #0a0a0a 4px,
+    #1a1a1a 4px,
+    #1a1a1a 8px
+  );
+  color: #e0e0e0;
+ 
 }
 
 .logo {
