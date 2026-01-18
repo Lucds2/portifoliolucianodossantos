@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portifólio Luciano</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="script.js" defer></script>
+    <title>Portifólio Luciano</title>
+    
 
     <!-- links de fonts -->
     <link
@@ -117,6 +119,28 @@
         /></a>
         <h3 class="txtport">Convite online</h3>
       </div>
+
+      <div class="perf2">
+        <a href="https://lucds2.github.io/tradutoronline/"
+          ><img src="./Imagens/Banner_tradutor.png" alt="" class="fotoport"
+        /></a>
+        <h3 class="txtport">Tradutor online</h3>
+      </div>
+
+      <div class="perf2">
+        <a href="https://lucds2.github.io/Agenda-de-Carrinhos/"
+          ><img src="./Imagens/Agendamento Carrinhos.png" alt="" class="fotoport"
+        /></a>
+        <h3 class="txtport">Agendamento Carrinho</h3>
+      </div>
+
+        <div class="perf2">
+        <a href="https://lucds2.github.io/Jokenpo/"
+          ><img src="./Imagens/JoKenPô.png" alt="" class="fotoport"
+        /></a>
+        <h3 class="txtport">Jo Ken Pô</h3>
+      </div>
+
     </div>
     <!-- Criação do formulário para contato -->
     <section id="contatos" class="contatos">
@@ -136,25 +160,5 @@
         <button type="submit" class="btn-form">Enviar Whatsapp</button>
       </form>
     </section>
-
-    <!-- Código JS para envio do formulário de contato -->
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("navMenu");
-        menu.classList.toggle("show");
-      }
-      function enviar(event) {
-        event.preventDefault();
-
-        const nome = document.getElementById("nome").value;
-        const mensagem = document.getElementById("mensagem").value;
-        const telefone = "5541984000638";
-        const texto = `Olá, me chamo ${nome}, ${mensagem}`;
-        const msgFormatada = encodeURIComponent(texto);
-        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
-
-        window.open(url, "_blank");
-      }
-    </script>
   </body>
 </html>
